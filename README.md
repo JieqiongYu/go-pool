@@ -4,3 +4,6 @@
 2. CARDS
 * A small toy demo demonstrates basic programming concepts about go.
 * Slice/Save To (From) File /Test
+3. STRUCTS
+* Struct
+* Pointer
