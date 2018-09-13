@@ -12,3 +12,5 @@
 * A simple Go Microservice for book CRUD
 5. Http-Server
 * Recipes about Basic Servers 
+6. static-file
+* Serving static files over HTTP
