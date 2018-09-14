@@ -14,3 +14,5 @@
 * Recipes about Basic Servers 
 6. static-file
 * Serving static files over HTTP
+7. validate-html-form
+* Use github.com/asaskeivh/govalidator to validate form data 
