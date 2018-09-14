@@ -1,18 +1,9 @@
 # go-pool
-1. Hello-World
-* Hello World toy
-2. CARDS
-* A small toy demo demonstrates basic programming concepts about go.
-* Slice/Save To (From) File /Test
-3. STRUCTS
-* Struct
-* Pointer
-4. Cloud-Native-Go
-* Example for Getting started with Cloud Native Go 
-* A simple Go Microservice for book CRUD
-5. Http-Server
-* Recipes about Basic Servers 
-6. static-file
-* Serving static files over HTTP
-7. validate-html-form
-* Use github.com/asaskeivh/govalidator to validate form data 
+1. Go-Basics
+* Simple demos to demonstrate basic grammar and types in Go programming language
+2. Http-Server
+* Examples of basic functionalities a http server and tcp server would provide
+3. Simple-Web
+* Example of hosting web pages using Go, including topics of template / form / file uplaoding. 
+4. Http-Session
+5. Cloud-Native-Go
