@@ -8,6 +8,9 @@
 4. Http-Session
 * Examples of how to write code for the following topics: cookie, cache, error-handling, and also a small demo of login-logout.
 5. Go-RestAPI
+* Examples of Consummers (GET/POST/PUT/DELETE) of restful web services. 
+6. SQL-NoSQL-Go
+*
 
 
 
