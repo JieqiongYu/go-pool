@@ -12,7 +12,7 @@ import (
 
 const (
 	connHost       = "localhost"
-	connPort       = "8080"
+	connPort       = "8090"
 	driverName     = "mysql"
 	dataSourceName = "root:password@/mydb"
 )
