@@ -10,7 +10,8 @@
 5. Go-RestAPI
 * Examples of Consummers (GET/POST/PUT/DELETE) of restful web services. 
 6. SQL-NoSQL-Go
-*
+* Examples of operations with SQL (MySQL) and NoSQL (MongoDB) 
+* [How to install MongoDB on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html) 
 
 
 
