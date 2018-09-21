@@ -12,7 +12,8 @@
 6. SQL-NoSQL-Go
 * Examples of operations with SQL (MySQL) and NoSQL (MongoDB) 
 * [How to install MongoDB on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html) 
-
+7. Go-Microservice
+* [How to install protoc](http://google.github.io/proto-lens/installing-protoc.html)
 
 
 
