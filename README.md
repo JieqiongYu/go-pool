@@ -14,7 +14,13 @@
 * [How to install MongoDB on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html) 
 7. Go-Microservice
 * [How to install protoc](http://google.github.io/proto-lens/installing-protoc.html)
-
+* Creating your first protocol buffer [first-protocol-buffer]
+* Creating your first microservice [first-microservices]
+* Creating your second microservice [second-microservices]
+* Creating your Micro API [micro-api]
+* Interacting  with microservices using a command-line interface and web UI (micro-web-ui)
+8. Go-WebSocket
+* 
 
 
 
