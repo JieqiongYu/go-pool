@@ -17,7 +17,7 @@ type Message struct {
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "../first-websocket-client/index.html")
+		http.ServeFile(w, r, "index.html")
 	})
 	http.HandleFunc("/echo", HandleClients)
 	err := http.ListenAndServe(":8080", nil)
