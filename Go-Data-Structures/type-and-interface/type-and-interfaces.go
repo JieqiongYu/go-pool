@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/go-pool/Go-Data-Structures/struct/simpleshape"
+	"github.com/go-pool/Go-Data-Structures/type-and-interface/simpleshape"
 )
 
 func main() {
