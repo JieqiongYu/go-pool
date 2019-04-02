@@ -11,7 +11,7 @@ func main() {
 
 	resp, err := http.Get("http://www.google.com/")
 	if err != nil {
-		log.Fatalf("Encountered the following error:", err)
+		log.Fatal("Encountered the following error:", err)
 	}
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
