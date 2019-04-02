@@ -3,7 +3,9 @@ package socialmedia
 import "time"
 
 /*MoodState is the variable for mood state. */
-// go:generate stringer -type=MoodState
+// install stringer first
+// go get golang.org/x/tools/cmd/stringer
+//go:generate stringer -type=MoodState
 type MoodState int
 
 // Here we define all the possible mood states using an iota enumerator.
