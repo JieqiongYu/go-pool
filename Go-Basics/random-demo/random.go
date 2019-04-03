@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-var tasks = []string{"Learning Japanese", "Coding", "Watch TV", "Work Out"}
+var tasks = []string{"Learning Japanese", "Coding"}
 
 func main() {
 	generateRandomTasks()
