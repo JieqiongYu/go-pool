@@ -2,8 +2,10 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/go-pool/Go-Projects/Gopher-Face/handlers"
+	ghandlers "github.com/gorilla/handlers"
 	mux "github.com/gorilla/mux"
 )
 
@@ -32,7 +34,14 @@ func main() {
 	// r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.UpdatePostEndpoint).Methods("PUT")
 	// r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.DeletePostEndpoint).Methods("DELETE")
 
-	http.Handle("/", r)
+	// http.Handle("/", r)
+
+	// middleware in gorilla toolkit
+	http.Handle("/", ghandlers.LoggingHandler(os.Stdout, r))
+
+	// User self defined middleware
+	// http.Handle("/", middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r)))
+	// http.Handle("/", middleware.ContextExampleHandler(middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r))))
 
 	http.ListenAndServe(WEBSERVERPORT, nil)
 }
