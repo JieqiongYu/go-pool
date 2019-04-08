@@ -18,11 +18,9 @@ func ContextExampleHandler(next http.Handler) http.Handler {
 
 func newExampleContext(ctx context.Context, r *http.Request) context.Context {
 
-	type key string
 	fooID := r.Header.Get("X-Foo-ID")
 	if fooID == "" {
 		fooID = "bar"
 	}
-	k := key("fooID")
-	return context.WithValue(ctx, k, fooID)
+	return context.WithValue(ctx, "fooID", fooID)
 }

@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/go-pool/Go-Projects/Gopher-Face/handlers"
+	"github.com/go-pool/Go-Projects/Gopher-Face/middleware"
 	ghandlers "github.com/gorilla/handlers"
 	mux "github.com/gorilla/mux"
 )
@@ -37,11 +38,11 @@ func main() {
 	// http.Handle("/", r)
 
 	// middleware in gorilla toolkit
-	http.Handle("/", ghandlers.LoggingHandler(os.Stdout, r))
+	// http.Handle("/", ghandlers.LoggingHandler(os.Stdout, r))
 
 	// User self defined middleware
 	// http.Handle("/", middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r)))
-	// http.Handle("/", middleware.ContextExampleHandler(middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r))))
+	http.Handle("/", middleware.ContextExampleHandler(middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r))))
 
 	http.ListenAndServe(WEBSERVERPORT, nil)
 }
