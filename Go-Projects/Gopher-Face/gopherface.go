@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/go-pool/Go-Projects/Gopher-Face/endpoints"
 	"github.com/go-pool/Go-Projects/Gopher-Face/handlers"
 	"github.com/go-pool/Go-Projects/Gopher-Face/middleware"
 	ghandlers "github.com/gorilla/handlers"
@@ -30,10 +31,11 @@ func main() {
 	r.HandleFunc("/triggerpanic", handlers.TriggerPanicHandler).Methods("GET")
 	r.HandleFunc("/foo", handlers.FooHandler).Methods("GET")
 
-	// r.HandleFunc("/restapi/socialmediapost/{username}", endpoints.FetchPostsEndpoint).Methods("GET")
-	// r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.CreatePostEndpoint).Methods("POST")
-	// r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.UpdatePostEndpoint).Methods("PUT")
-	// r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.DeletePostEndpoint).Methods("DELETE")
+	// http://localhost:8080/restapi/socialmediapost/MerJQ
+	r.HandleFunc("/restapi/socialmediapost/{username}", endpoints.FetchPostsEndpoint).Methods("GET")
+	r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.CreatePostEndpoint).Methods("POST")
+	r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.UpdatePostEndpoint).Methods("PUT")
+	r.HandleFunc("/restapi/socialmediapost/{postid}", endpoints.DeletePostEndpoint).Methods("DELETE")
 
 	// http.Handle("/", r)
 
