@@ -1,6 +1,8 @@
 # Cloud Native Go
 
-In this demo, it demonstrates things as the following:
+In this demo, it demonstrates things as the following
+
+## Simple Go HTTP Server Implementation
 
 * Simple HTTP server implementation in go
   * Using the Go `net/http` package
@@ -83,3 +85,40 @@ In this demo, it demonstrates things as the following:
   
   * Using HTTP status code
   * Using HTTP verbs: GET, PUT, POST, DELETE
+
+## Docker Image for Go Microservice
+
+The base image for this is `golang:1.12.3-alpine3.9`, and the command to get the docker image is:
+
+```bash
+docker pull golang:1.12.3-alpine3.9
+```
+
+### 1. Build `Dockerfile`:
+
+```bash
+cd /path/to/Cloud-Native-Go/
+docker build -t cloud-native-go:1.0.0 .
+```
+
+Remove one image
+
+```bash
+docker rmi -f <IMAGE_ID>
+```
+
+### 2. Push customized image to Docker Hub
+
+Use `tag` command
+
+```bash
+## docker tag [DOCKER_REPOSITORY_NAME:TAG] [DOCKER_ACCOUNT/[DOCKER_REPOSITORY_NAME:TAG]]
+docker tag cloud-native-go:1.0.0 jieqiong/cloud-native-go:1.0.0
+```
+
+Login docker hub and do the push thing
+
+```bash
+docker login
+docker push jieqiong/cloud-native-go:1.0.0
+```
