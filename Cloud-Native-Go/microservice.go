@@ -5,11 +5,13 @@ import (
 	"net/http"
 	"os"
 
-	"./api"
+	api "github.com/JieqiongYu/go-pool/Cloud-Native-Go/api"
 )
 
 func main() {
+	// http://localhost:8080/
 	http.HandleFunc("/", index)
+	// localhost:8080/api/echo?message=Cloud-Native-Go
 	http.HandleFunc("/api/echo", echo)
 
 	http.HandleFunc("/api/books", api.BooksHandleFunc)

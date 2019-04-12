@@ -63,9 +63,11 @@ func AllBooks() []Book {
 // BooksHandleFunc to be used as http.HandleFunc for Book API
 func BooksHandleFunc(w http.ResponseWriter, r *http.Request) {
 	switch method := r.Method; method {
+	// HTTP Verb: GET
 	case http.MethodGet:
 		books := AllBooks()
 		writeJSON(w, books)
+	// HTTP Verb: POST
 	case http.MethodPost:
 		body, err := ioutil.ReadAll(r.Body)
 		if err != nil {
@@ -88,9 +90,11 @@ func BooksHandleFunc(w http.ResponseWriter, r *http.Request) {
 // BookHandleFunc to be used as http.HandleFunc for Book API
 func BookHandleFunc(w http.ResponseWriter, r *http.Request) {
 	// implement logic for /api/book/<isbn>
+	// Using the request path and query parameters
 	isbn := r.URL.Path[len("/api/books/"):]
 
 	switch method := r.Method; method {
+	// HTTP Verb: GET
 	case http.MethodGet:
 		book, found := GetBook(isbn)
 		if found {
@@ -98,6 +102,7 @@ func BookHandleFunc(w http.ResponseWriter, r *http.Request) {
 		} else {
 			w.WriteHeader(http.StatusNotFound)
 		}
+	// HTTP Verb: PUT
 	case http.MethodPut:
 		body, err := ioutil.ReadAll(r.Body)
 		if err != nil {
@@ -106,10 +111,12 @@ func BookHandleFunc(w http.ResponseWriter, r *http.Request) {
 		book := FromJSON(body)
 		exists := UpdateBook(isbn, book)
 		if exists {
+			// HTTP status code
 			w.WriteHeader(http.StatusOK)
 		} else {
 			w.WriteHeader(http.StatusNotFound)
 		}
+	// HTTP Verb: DELETE
 	case http.MethodDelete:
 		DeleteBook(isbn)
 		w.WriteHeader(http.StatusOK)
