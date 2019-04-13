@@ -1,8 +1,7 @@
 # The base image is golang:1.12.3
 FROM golang:1.12.3-alpine3.9
-MAINTAINER Jieqiong YU
 
-ENV SOURCES $HOME/go/src/github.com/go-pool/Cloud-Native-Go/
+ENV SOURCES /go/src/github.com/go-pool/Cloud-Native-Go/
 
 # Copy the source code directory to the base image
 COPY . ${SOURCES}
