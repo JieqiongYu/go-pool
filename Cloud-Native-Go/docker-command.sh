@@ -13,8 +13,3 @@ docker push jieqiong/cloud-native-go:1.0.0
 
 ## Run cloud-native-go container
 docker run -it -p 8080:8080 cloud-native-go:1.0.0
-
-## Get the container id
-docker ps
-## Get the container ip: `2e8ba2e6df90` is the container id
-docker inspect 2e8ba2e6df90 | grep '"IPAddress"' | head -n 1
