@@ -122,3 +122,9 @@ Login docker hub and do the push thing
 docker login
 docker push jieqiong/cloud-native-go:1.0.0
 ```
+
+Run cloud-native-go container
+
+```bash
+docker run -it -p 8080:8080 cloud-native-go:1.0.0
+```

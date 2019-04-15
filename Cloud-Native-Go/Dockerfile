@@ -6,7 +6,7 @@ ENV SOURCES /go/src/github.com/go-pool/Cloud-Native-Go/
 # Copy the source code directory to the base image
 COPY . ${SOURCES}
 
-RUN cd ${SOURCES} && CGO_ENABLED=0 go install
+RUN cd ${SOURCES} && CGO_ENABLED=0 go install -a
 
 ENV PORT 8080
 EXPOSE 8080
