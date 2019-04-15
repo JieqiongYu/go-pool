@@ -2,6 +2,12 @@
 
 In this demo, it demonstrates things as the following
 
+[Cloud Native Go](#cloud-native-go) 
+- [Simple Go HTTP Server Implementation](#simple-go-http-server-implementation)
+- [Docker Image for Go Microservice](#docker-image-for-go-microservice)
+  - [1. Build `Dockerfile`](#1-build-dockerfile)
+  - [2. Push customized image to Docker Hub](#2-push-customized-image-to-docker-hub)
+
 ## Simple Go HTTP Server Implementation
 
 * Simple HTTP server implementation in go
@@ -94,7 +100,7 @@ The base image for this is `golang:1.12.3-alpine3.9`, and the command to get the
 docker pull golang:1.12.3-alpine3.9
 ```
 
-### 1. Build `Dockerfile`:
+### 1. Build `Dockerfile`
 
 ```bash
 cd /path/to/Cloud-Native-Go/
@@ -127,4 +133,25 @@ Run cloud-native-go container
 
 ```bash
 docker run -it -p 8080:8080 cloud-native-go:1.0.0
+```
+
+How to test if it works?
+
+```bash
+# in local terminal
+curl http://localhost:8080/api/books
+```
+
+Try a different port:
+
+```bash
+# -e means for `environment`
+docker run -it -e "PORT=9090" -p 9090:9090 cloud-native-go:1.0.0
+```
+
+How to test if it works?
+
+```bash
+# in local terminal
+curl http://localhost:9090/api/books
 ```
