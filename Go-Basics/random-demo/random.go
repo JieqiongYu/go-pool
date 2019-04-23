@@ -16,6 +16,8 @@ func generateRandomTasks() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	randomTask := tasks[rand.Intn(len(tasks))]
-	fmt.Println("Random task is", randomTask)
+	// randomTask := tasks[rand.Intn(len(tasks))]
+	// fmt.Println("Random task is", randomTask)
+
+	fmt.Println("Random number: ", rand.Intn(1024))
 }
