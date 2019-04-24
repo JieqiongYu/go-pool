@@ -19,5 +19,5 @@ gcloud pubsub topics publish HELLO_WORLD --message '{"name":"MerJQ", "hobby":"Ne
 ### Check logs
 
 ```bash
-gcloud functions log read --limit 50
+gcloud functions logs read --limit 50
 ```
