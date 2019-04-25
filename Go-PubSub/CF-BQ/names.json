@@ -1,0 +1,14 @@
+[
+    {
+        "description": "Name", 
+        "name": "NAME",
+        "type": "String",
+        "mode": "Required"
+    },
+    {
+        "description": "Datetime",
+        "name": "DATETIME",
+        "type": "Timestamp",
+        "mode": "Nullable"
+    }
+]
