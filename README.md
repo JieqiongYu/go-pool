@@ -63,8 +63,7 @@
     - Unit testing your first WebSocket server ([first-unit-test-websocket](https://github.com/JieqiongYu/go-pool/tree/master/Go-WebSocket/first-unit-test-websocket))
 9. Go-Beego
 * Working with the Go Web Application Framework
-
-
-
+10. Restful-Web-Services
+* Notes and Code examples from [Building Restful Web](https://learning.oreilly.com/library/view/building-restful-web/9781788294287/)
 
 100. Cloud-Native-Go
