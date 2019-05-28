@@ -42,7 +42,7 @@ Add one record in cloud firestore of `movie_reviews`
 ### Delete
 
 ```bash
-gcloud functions delete SunTimes
+gcloud functions delete ScoreReview
 ```
 
 ## Reference 
