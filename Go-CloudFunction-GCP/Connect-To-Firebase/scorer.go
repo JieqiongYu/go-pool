@@ -2,10 +2,10 @@ package scorer
 
 import (
 	"context"
-	"firebase.google.com/go"
-	"firebase.google.com/go/db"
 	"log"
 	"time"
+
+	"firebase.google.com/go/db"
 )
 
 // FirestoreEvent is the payload of a Firestore event.
@@ -58,6 +58,9 @@ func init() {
 
 // ScoreReview generates the scores for movie reviews and transactionally writes them to the Firebase Realtime Database.
 func ScoreReview(ctx context.Context, e FirestoreEvent) error {
+	docID := e.Value.Name
+	log.println(docID)
+
 	review := e.Value.Fields
 
 	reviewScore := score(review.Text.Value)
