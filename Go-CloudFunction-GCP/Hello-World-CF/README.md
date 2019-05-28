@@ -8,6 +8,7 @@ gcloud config get-value core/project
 # Set project
 gcloud config set project <PROJECT_ID>
 ```
+
 ### Deploy
 
 ```bash
