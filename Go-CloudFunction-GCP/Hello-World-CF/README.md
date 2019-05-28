@@ -8,6 +8,7 @@ gcloud config get-value core/project
 # Set project
 gcloud config set project <PROJECT_ID>
 ```
+
 ### Deploy
 
 ```bash
@@ -17,7 +18,7 @@ gcloud functions deploy HelloWorld --runtime go111 --trigger-http
 ### Test
 
 ```bash
-curl https://us-central1-kouzoh-p-jieqiong-yu.cloudfunctions.net/HelloWorld
+curl https://us-central1-connect-cf.cloudfunctions.net/HelloWorld
 ```
 
 ### Clean up

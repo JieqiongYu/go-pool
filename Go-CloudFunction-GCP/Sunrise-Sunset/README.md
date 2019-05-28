@@ -35,6 +35,7 @@ gcloud functions deploy SunTimes --runtime go111 --trigger-http
 ## Test
 
 ```bash
+gcloud functions describe SunTimes
 curl "https://us-central1-kouzoh-p-jieqiong-yu.cloudfunctions.net/SunTimes?lat=47.6&lon=122.3&date=2019-05-27"
 ```
 
@@ -42,6 +43,11 @@ Response
 
 ```bash
 {"sunset":"2019-05-27T11:34:25Z","sunrise":"2019-05-26T20:01:40Z"}
+```
+## Clean up
+
+```bash
+gcloud functions delete SunTimes
 ```
 
 ## Reference
