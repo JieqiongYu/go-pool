@@ -2,14 +2,13 @@ package scorer
 
 import (
 	"context"
-	"log"
-	"time"
-
 	"firebase.google.com/go"
 	"firebase.google.com/go/db"
+	"log"
+	"time"
 )
 
-// FirestoreEvent is the payload of a Firestore event. 
+// FirestoreEvent is the payload of a Firestore event.
 type FirestoreEvent struct {
 	OldValue   FirestoreValue `json::"oldValue"`
 	Value      FirestoreValue `json:"value"`
@@ -18,18 +17,18 @@ type FirestoreEvent struct {
 	} `json:"updateMask"`
 }
 
-// FirestoreValue struct 
+// FirestoreValue struct
 type FirestoreValue struct {
 	CreateTime time.Time `json:"createTime"`
-	// Fields is the data for this value. The type depends on the format of your database. 
-	// Log an interface{} value and inspect the result to ses a JSON 
+	// Fields is the data for this value. The type depends on the format of your database.
+	// Log an interface{} value and inspect the result to ses a JSON
 	// representation of your database fields.
 	Fields     Review    `json:"fields"`
 	Name       string    `json:"name"`
 	UpdateTime time.Time `json:"updateTime"`
 }
 
-// Review reprsents the Firestore schema of a movie review. 
+// Review reprsents the Firestore schema of a movie review.
 type Review struct {
 	Author struct {
 		Value string `json:"stringValue`
@@ -57,9 +56,10 @@ func init() {
 	}
 }
 
-// ScoreReview generates the scores for movie reviews and transactionally writes them to the Firebase Realtime Database. 
+// ScoreReview generates the scores for movie reviews and transactionally writes them to the Firebase Realtime Database.
 func ScoreReview(ctx context.Context, e FirestoreEvent) error {
 	review := e.Value.Fields
+
 	reviewScore := score(review.Text.Value)
 
 	ref := client.NewRef("scores").Child(review.Author.Value)
