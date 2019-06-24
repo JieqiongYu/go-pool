@@ -8,12 +8,11 @@ import (
 	"encoding/base64"
 	"firebase.google.com/go"
 	"fmt"
+	"google.golang.org/api/option"
 	"io"
 	"strconv"
 
 	"cloud.google.com/go/firestore"
-	"google.golang.org/api/option"
-
 	"github.com/golang/glog"
 )
 
@@ -34,7 +33,7 @@ func initFirebase() *firebase.App {
 
 // Write
 func write(ctx context.Context, client *firestore.Client, userID int64, e externalid) {
-	result, err := client.Collection("externalid").Doc(strconv.FormatInt(userID,10)).Set(ctx, e)
+	result, err := client.Collection("externalid").Doc(strconv.FormatInt(userID,10)).Set(ctx, e, firestore.MergeAll)
 	if err != nil {
 		glog.Errorln(err)
 	}
@@ -97,7 +96,7 @@ func main() {
 
 	defer client.Close()
 
-	for userID = 999999892; userID >= 999999862; userID-- {
+	for userID = 123456789; userID >= 123456779; userID-- {
 		pushRequest := externalid{
 			ExternalID: encrypt(userID),
 		}
