@@ -1,6 +1,5 @@
 # go-pool
-1. Go-Basics
-* Simple demos to demonstrate basic grammar and types in Go programming language
+* [Basics](https://github.com/JieqiongYu/go-pool/tree/master/basics)
 2. Http-Server
 * Creating your First Server in Go
     - Creating a simple HTTP server ([http-server](https://github.com/JieqiongYu/go-pool/tree/master/Http-Server/http-server))

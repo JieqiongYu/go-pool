@@ -4,9 +4,9 @@ import "fmt"
 
 const (
 	_ = iota
-	TrafficLightStateRedLight
-	TrafficLightStateGreenLight
-	TrafficLightStateYellowLight
+	TrafficLightStateRedLight = "red"
+	TrafficLightStateGreenLight = "green"
+	TrafficLightStateYellowLight = "yellow"
 )
 
 func main() {
