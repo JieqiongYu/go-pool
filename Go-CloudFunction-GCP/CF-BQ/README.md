@@ -37,7 +37,7 @@ gcloud functions deploy ToBigQuery --runtime go111 --trigger-http
 ## Test
 
 ```bash
-curl https://us-central1-<PROJECT_ID>.cloudfunctions.net/ToBigQuery?name=MerJQ
+curl "https://<REGION>-<PROJECT_ID>.cloudfunctions.net/ToBigQuery?name=MerJQ"
 ```
 
 Check the item 

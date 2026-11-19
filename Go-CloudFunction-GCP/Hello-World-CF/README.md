@@ -18,7 +18,7 @@ gcloud functions deploy HelloWorld --runtime go111 --trigger-http
 ### Test
 
 ```bash
-curl https://us-central1-<PROJECT_ID>.cloudfunctions.net/HelloWorld
+curl "https://<REGION>-<PROJECT_ID>.cloudfunctions.net/HelloWorld"
 ```
 
 ### Clean up

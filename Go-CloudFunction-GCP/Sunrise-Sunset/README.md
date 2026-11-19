@@ -36,7 +36,7 @@ gcloud functions deploy SunTimes --runtime go111 --trigger-http
 
 ```bash
 gcloud functions describe SunTimes
-curl "https://us-central1-<PROJECT_ID>.cloudfunctions.net/SunTimes?lat=47.6&lon=122.3&date=2019-05-27"
+curl "https://<REGION>-<PROJECT_ID>.cloudfunctions.net/SunTimes?lat=47.6&lon=122.3&date=2019-05-27"
 ```
 
 Response
